@@ -1,0 +1,22 @@
+[
+  {
+    "alertMessage": "CronJob: unsafe-proc-mount-cronjob container job sets securityContext.procMount to Unmasked",
+    "packagename": "armo_builtins",
+    "failedPaths": [
+      "spec.jobTemplate.spec.template.spec.containers[0].securityContext.procMount"
+    ],
+    "fixPaths": [],
+    "alertScore": 7,
+    "alertObject": {
+      "k8sApiObjects": [
+        {
+          "apiVersion": "batch/v1",
+          "kind": "CronJob",
+          "metadata": {
+            "name": "unsafe-proc-mount-cronjob"
+          }
+        }
+      ]
+    }
+  }
+]

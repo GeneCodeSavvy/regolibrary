@@ -1,0 +1,22 @@
+[
+  {
+    "alertMessage": "Pod: unsafe-proc-mount-pod container unsafe sets securityContext.procMount to Unmasked",
+    "packagename": "armo_builtins",
+    "failedPaths": [
+      "spec.containers[1].securityContext.procMount"
+    ],
+    "fixPaths": [],
+    "alertScore": 7,
+    "alertObject": {
+      "k8sApiObjects": [
+        {
+          "apiVersion": "v1",
+          "kind": "Pod",
+          "metadata": {
+            "name": "unsafe-proc-mount-pod"
+          }
+        }
+      ]
+    }
+  }
+]

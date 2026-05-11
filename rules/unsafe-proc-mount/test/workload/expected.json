@@ -1,0 +1,22 @@
+[
+  {
+    "alertMessage": "Deployment: unsafe-proc-mount-deployment container worker sets securityContext.procMount to Unmasked",
+    "packagename": "armo_builtins",
+    "failedPaths": [
+      "spec.template.spec.containers[1].securityContext.procMount"
+    ],
+    "fixPaths": [],
+    "alertScore": 7,
+    "alertObject": {
+      "k8sApiObjects": [
+        {
+          "apiVersion": "apps/v1",
+          "kind": "Deployment",
+          "metadata": {
+            "name": "unsafe-proc-mount-deployment"
+          }
+        }
+      ]
+    }
+  }
+]

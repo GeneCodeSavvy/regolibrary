@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unsafe-proc-mount-deployment
+spec:
+  selector:
+    matchLabels:
+      app: unsafe-proc-mount
+  template:
+    metadata:
+      labels:
+        app: unsafe-proc-mount
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          securityContext:
+            procMount: Default
+        - name: worker
+          image: nginx
+          securityContext:
+            procMount: Unmasked

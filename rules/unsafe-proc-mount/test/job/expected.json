@@ -1,0 +1,22 @@
+[
+  {
+    "alertMessage": "Job: unsafe-proc-mount-job container worker sets securityContext.procMount to Unmasked",
+    "packagename": "armo_builtins",
+    "failedPaths": [
+      "spec.template.spec.containers[0].securityContext.procMount"
+    ],
+    "fixPaths": [],
+    "alertScore": 7,
+    "alertObject": {
+      "k8sApiObjects": [
+        {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "metadata": {
+            "name": "unsafe-proc-mount-job"
+          }
+        }
+      ]
+    }
+  }
+]
