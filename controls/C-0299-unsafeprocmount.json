@@ -1,0 +1,25 @@
+{
+    "name": "Unsafe proc mount",
+    "attributes": {
+        "controlTypeTags": [
+            "devops"
+        ]
+    },
+    "description": "A container with securityContext.procMount set to Unmasked bypasses the default masked /proc paths and can expose host process information that should remain restricted.",
+    "remediation": "Remove securityContext.procMount: Unmasked or set procMount to Default.",
+    "rulesNames": [
+        "unsafe-proc-mount"
+    ],
+    "test": "Check every container in Pods, pod-template workloads, Jobs, and CronJobs for securityContext.procMount set to Unmasked.",
+    "controlID": "C-0299",
+    "baseScore": 7.0,
+    "category": {
+        "name": "Workload"
+    },
+    "scanningScope": {
+        "matches": [
+            "cluster",
+            "file"
+        ]
+    }
+}

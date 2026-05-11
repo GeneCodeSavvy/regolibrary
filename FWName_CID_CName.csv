@@ -286,3 +286,5 @@ ArmoBest,C-0292,Nginx Ingress Controller End of Life
 nsa,C-0292,Nginx Ingress Controller End of Life
 DevOpsBest,C-0293,Service with no workload
 AllControls,C-0293,Service with no workload
+DevOpsBest,C-0299,Unsafe proc mount
+AllControls,C-0299,Unsafe proc mount
